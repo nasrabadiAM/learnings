@@ -25,7 +25,7 @@ http://nvie.com/posts/a-successful-git-branching-model/
 ===
 
 
-![](git-model.png =300x450)
+![](git-model.png | height=600)
 
 یک مدل توسعه نرم افزار است که با گیت کار میکند.
 
