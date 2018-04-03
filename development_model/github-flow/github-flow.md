@@ -18,6 +18,9 @@ GitHub Flow
 ===
 
 [scottchacon](http://scottchacon.com/2011/08/31/github-flow.html)
+
+or 
+
 [github](https://guides.github.com/introduction/flow/)
 
 
