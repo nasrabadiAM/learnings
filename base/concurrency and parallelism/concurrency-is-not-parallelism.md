@@ -49,7 +49,7 @@ Concurrency is about dealing with lots of things at once. Parallelism is about d
 نتیجه یک خطی
 ===
  
-![](concurrency-vs-parallelism.png)
+![](concurrenc-vs-parallelism.png)
  
 دسته‌بندی(پوشه)
 ===
