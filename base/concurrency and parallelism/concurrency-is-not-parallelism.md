@@ -46,8 +46,6 @@ Concurrency is about dealing with lots of things at once. Parallelism is about d
 
 
 
-
-
 The programming keywords you have mentioned refer to techniques invented for specific reasons to solve problems in the field of computation and processing.
 
 A concise essence of what each technique aims to solve:
@@ -63,6 +61,9 @@ Asynchrony: A set of tasks to be completed. I am performing one of them currentl
 Note that the techniques discussed above are not necessarily mutually exclusive. Specifically, multi-threading is a type of parallelism, which in turn does result in degree of concurrency being more than 1 (non-trivial multi-threading).
 
 Incidentally, I've maintained a blog about parallel computing. In one of the posts, I've written about the jargon used in the same field.
+
+
+
 نتیجه یک خطی
 ===
  
