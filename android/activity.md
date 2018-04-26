@@ -113,3 +113,32 @@ startActivity(sendIntent);
 
 اگر برنامه‌اتان را طوری طراحی کردید که فقط باید از داخل برنامه آن کار را انجام دهد، به هیچ‌وجه نباید این اطلاعات را در مانیفست بنویسید. بلکه باید از داخل خود برنامه اینتنت را اجرا کنید.
 
+
+
+
+
+
+تعریف permissionها: 
+---
+
+
+می‌توانیم از تگ اکیتویتی در مانیفست برای تعریف پرمیشن‌های جدید استفاده کنیم. 
+
+در این صورت اگر اپ دیگری این پرمیشن را نگیرد، نمی‌تواند آن اکتیوتی را لانچ کند.
+
+
+```xml
+<manifest>
+<activity android:name="...."
+   android:permission=”com.google.socialapp.permission.SHARE_POST”
+
+/>
+```
+
+
+```xml
+<manifest>
+   <uses-permission android:name="com.google.socialapp.permission.SHARE_POST" />
+</manifest>
+```
+
