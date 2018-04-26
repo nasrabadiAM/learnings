@@ -153,6 +153,18 @@ startActivity(sendIntent);
 ---
 
 https://developer.android.com/guide/components/activities/intro-activities
+
+
 https://academy.realm.io/posts/activities-in-the-wild-exploring-the-activity-lifecycle-android/
+
+
 https://www.bignerdranch.com/blog/android-activity-lifecycle-onStop/
+
+
 https://developer.android.com/guide/components/activities/activity-lifecycle
+
+
+https://medium.com/google-developers/the-android-lifecycle-cheat-sheet-part-i-single-activities-e49fd3d202ab
+
+
+https://medium.com/sketchware/activity-lifecycle-in-android-applications-1b48a7bb584c
