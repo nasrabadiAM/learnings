@@ -1,5 +1,5 @@
-##what is pipeline in software
-
+what is pipeline in software
+---
 
 pipeline
 در نرم افزار به چه معناست؟
@@ -42,7 +42,7 @@ ci باشد.
 
 
 منابع:
-
+---
 https://en.wikipedia.org/wiki/Pipeline_(software)
 
 
