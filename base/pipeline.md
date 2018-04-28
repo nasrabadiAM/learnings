@@ -26,10 +26,7 @@ pipeline
 
 
 همه کارها در یک مرحله به صورت موازی parallel  
-
-
  همه کارها در یک مرحله stage به صورت مواری parallel  اجرا می شوند.
- 
  و زمانی که تمام کارهای یک مرحله stage انجام شد وارد مرحله بعدی می شویم.
  
  
@@ -39,6 +36,9 @@ pipeline
 ci باشد.
 
 ![](https://docs.gitlab.com/ee/ci/img/pipelines.png)
+
+
+
 
 
 منابع:
