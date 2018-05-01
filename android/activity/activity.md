@@ -50,7 +50,7 @@ What is Activity?
 
 
 
-![Activity states](.png)
+![Activity states](activityStateDiagram.jpeg)
 
 
 
