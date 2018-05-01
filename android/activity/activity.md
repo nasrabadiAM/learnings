@@ -123,7 +123,7 @@ startActivity(sendIntent);
 
 
 
-تعریف permissionها: 
+permissionها: 
 ---
 
 
