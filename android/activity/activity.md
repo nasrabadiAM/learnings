@@ -47,7 +47,11 @@ What is Activity?
 
 اکتیوتی‌ها در سیستم اندروید وضعیت‌های مختلفی دارند که در تصویر زیر نمایش داده شده است.
 
-//تصویر وضعیت‌های اکتویتی
+
+
+
+![Activity states](.png)
+
 
 
 
@@ -262,7 +266,13 @@ onDestroy
 
 
 
+![Activity](cheatsheatactivity.png)
+
+
+
+
 ![Activities](cheatsheatactivities.png)
+
 
 
 
