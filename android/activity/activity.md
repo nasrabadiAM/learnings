@@ -389,6 +389,11 @@ permissionها:
 
 
 
+هندل کردن تغیر وضعیت‌های اکتیویتی
+---
+
+
+
 
 
 
@@ -412,3 +417,9 @@ https://medium.com/google-developers/the-android-lifecycle-cheat-sheet-part-i-si
 
 
 https://medium.com/sketchware/activity-lifecycle-in-android-applications-1b48a7bb584c
+
+
+https://developer.android.com/guide/components/activities/state-changes
+
+
+https://developer.android.com/topic/libraries/architecture/viewmodel
