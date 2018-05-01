@@ -418,41 +418,19 @@ start کردن اکتیوتی‌ها
 
 
 
-برای بازیابی این مقادیر یا آن‌ها را از باندل 
+برای بازیابی این مقادیر یا آن‌ها را از باندل onCreate میگیریم و یا در متد onRestoreInstanceState.
 
-onCreate 
 
-میگیریم و یا در متد 
 
-onRestoreInstanceState
 
-.
 
 تفاوت دریافت در این دو جا تنها در این است که مقدارباندل درون
 
-onCreate 
-
-می‌تواند 
-
-null 
-
-باشد ولی مقدار درون متد 
-
-onRestoreInstanceState 
-
-همیشه 
-
-non-null 
-
-است چرا که این متد فقط زمانی کال می‌شود که باندل مقدار داشته باشد.
+onCreate می‌تواند null باشد ولی مقدار درون متد onRestoreInstanceState همیشه non-null است چرا که این متد فقط زمانی کال می‌شود که باندل مقدار داشته باشد
 
 
 
-تفاوت دیگر این است که متد 
-
-onRestoreInstanceState بعد از 
-
-onStart صدا زده می شود.
+تفاوت دیگر این است که متد onRestoreInstanceState بعد از onStart صدا زده می شود.
 
 
 
@@ -476,19 +454,7 @@ onStart صدا زده می شود.
 
 
 
-ذخیره داده‌ها در 
-
-local storage
-
-، استفاده از 
-
-onSaveInstanceState
-
-و 
-
-ViewModel class
-
-.
+ذخیره داده‌ها در local storage، استفاده از onSaveInstanceState و ViewModel class.
 
 
 
