@@ -67,7 +67,7 @@ What is Activity?
 
 
 
-![Activity callbacks](activity_lifecycle.jpeg)
+![Activity callbacks](activity_lifecycle.png)
 
 
 
