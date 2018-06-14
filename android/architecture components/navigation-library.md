@@ -32,6 +32,7 @@ destination به هر صفحه‌ای گفته می‌شود که در برنا�
   
   
   
-  منبع
-  ---
+منبع
+---
+  
   https://developer.android.com/topic/libraries/architecture/navigation/navigation-implementing
