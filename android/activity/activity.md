@@ -589,4 +589,7 @@ https://medium.com/sketchware/activity-lifecycle-in-android-applications-1b48a7b
 https://developer.android.com/guide/components/activities/state-changes
 
 
+https://developer.android.com/topic/libraries/architecture/saving-states
+
+
 https://developer.android.com/topic/libraries/architecture/viewmodel
