@@ -13,3 +13,19 @@
 
 چرخه حیات فرگمنت (fragment lifecycle)
 ---
+
+
+
+
+
+
+
+
+منابع
+---
+
+https://developer.android.com/guide/components/fragments
+
+https://developer.android.com/guide/practices/screens_support
+
+https://gist.github.com/kaushikgopal/5c1b029798b73c73193d
