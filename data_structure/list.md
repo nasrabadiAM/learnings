@@ -72,7 +72,7 @@ import java.util.function.UnaryOperator;
  * that these operations may execute in time proportional to the index value
  * for some implementations (the <tt>LinkedList</tt> class, for
  * example). Thus, iterating over the elements in a list is typically
- * preferable to indexing through it if the caller does not know the
+ * preferable to indexing through it if the caller does not know thenew
  * implementation.<p>
  *
  * The <tt>List</tt> interface provides a special iterator, called a
@@ -778,6 +778,7 @@ public interface List<E> extends Collection<E> {
 ```
 
 منابع:
+---
 
 https://en.wikipedia.org/wiki/List_(abstract_data_type)
 
