@@ -5,8 +5,8 @@
 
 
 
-., [08.07.18 22:04]
 
+```gradle
 packagingOptions {
         exclude '.readme'
         exclude 'LICENSE.txt'
@@ -26,9 +26,8 @@ packagingOptions {
         doNotStrip '*/mips/*.so'
         doNotStrip '*/mips64/*.so'
     }
+```
 
-Javid, [08.07.18 22:32]
-[In reply to .]
 
 
 این META-INF ها همگی متادیتاهایی هستن که معمولا تو کتابخونه‌های جاوایی (jar) وجود دارن، گاهی ممکنه بعضی از این کتابخونه‌ها که تو پروژه استفاده میشن با هم تداخل داشته باشن، برای همین exclude میشن که مشکلی پیش نیاد. نبودشون هم هیچ ضرری برای پروژه نداره.
