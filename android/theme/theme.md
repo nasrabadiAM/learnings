@@ -10,7 +10,7 @@
 
 از آن به بعد تم‌ها در فایل استایل به صورت زیر نوشته می‌شوند:
 
-
+```xml
 `<resources>
  <!-- inherit from the AppCompat theme -->
  <style name="AppTheme" parent="Theme.AppCompat">
@@ -23,17 +23,17 @@
  </style>
 </resources>
 `
-
+```
 
 اولین رنگی که در تم تعریف می‌شود، colorPrimary یا رنگ اصلی برنامه است. معمولا AppBar  و قسمت‌های اصلی برنامه از این رنگ استفاده می‌کنند.
 وقتی از ActionBar  استفاده می‌کنیم، این زنگ به صورت خودکار به پس‌زمینه AppBar نسبت‌داده می‌شود، اما اگر از تولبار استفاده کنیم، باید به صورت زیر خودمان رنگ پس‌زمینه را بدهیم:
 
-
+```xml
 `<android.support.v7.widget.Toolbar
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:background="?attr/colorPrimary" />`
-
+```
 
 این نحوه درست رنگ‌دهی به المان‌ها است. زمانیکه به این روش (?attr/) رنگ می‌دهیم، درواقع به اندروید می‌گوییم که رنگ موجود درتم را استفاده کند، به جای آنکه مستقیم رنگ بدهیم.
 
@@ -51,6 +51,7 @@
 
 با استفاده ThemeOverlay  ها، می توانیم به هرتکه ویو‌ یک تم دلخواه بدهیم. می‌توانیم به صورت زیر از ThemeOverlayا استفاده کنیم:
 
+```xml
 `<!-- Ensure text is readable on a dark background by using a 
      Dark ThemeOverlay -->
 <android.support.v7.widget.Toolbar
@@ -58,14 +59,33 @@
   android:layout_height="wrap_content"
   android:background="?attr/colorPrimary"
   android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />`
-
+```
 
 
 قدرت دیگری که تم‌ها دارند، ساخت تم کاستوم خودمان است که می توانیم به صورت زیر بسازیم:
 
+```xml
 `<style name="ThemeOverlay.AccentSecondary"
        parent="ThemeOverlay.AppCompat">
   <item name=”colorAccent”>@color/accent_secondary</item>
 </style>`
+```
+
+
+
+نمونه کد
+---
+
+https://gitlab.com/nasrabadiapps/ziarat-ashura
+
+
+منابع
+---
+
+https://medium.com/google-developers/theming-with-appcompat-1a292b754b35
+
+https://www.hidroh.com/2015/02/16/support-multiple-themes-android-app/
+
+https://android.jlelse.eu/android-developers-we-ve-been-using-themes-all-wrong-eed7755da586
 
  
