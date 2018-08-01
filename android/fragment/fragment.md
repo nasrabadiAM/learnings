@@ -85,7 +85,7 @@ fragmentTransaction.commit();
 دقت کنید که چرخه حیات فرگمنت وابسته به چرخه حیات اکتیویتی پدرش است. 
 
 //عکس سایت اندروید
-![fragment-and-activity-lifecycle](activity-fragment-lifecycle.png)
+![fragment-and-activity-lifecycle](activity_fragment_lifecycle.png)
 
 
 //عکس چرخه حیات فرگمنت نسخه غیررسمی  
