@@ -88,7 +88,7 @@ fragmentTransaction.commit();
 ![fragment-and-activity-lifecycle](activity_fragment_lifecycle.png)
 
 
-![activity-lifecycle](../activity/activityStateDiagram.jpeg)
+![activity-lifecycle](fragmentStateDiagram.jpeg)
 
 
 کال‌بک‌های موجود در فرگمنت همانند کال‌بک‌های اکتیویتی‌ها هستند، یعنی هر کال‌بکی که در اکتیویتی داریم در فرگمنت‌ هم وجود دارد و همزمان با هم صدا زده می‌شوند به این صورت که زمانی که مثلا onPause  اکتیویتی صدا زده می‌شود، onPause  همه فرگمنت‌های موجود در آن نیز صدا زده می‌شوند. اما در فرگمنت تعدادی کال‌بک اضافی نیز وجود دارد. 
