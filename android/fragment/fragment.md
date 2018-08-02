@@ -123,6 +123,44 @@ onDetach
 
 فقط زمانیکه اکتیویتی پر در حالت Running  قرار دارد، فرگمنت می‌تواند به صورت آزادانه چرخه‌حیات خود را کنترل کند.
 
+
+
+
+بررسی چند سناریو
+---
+حالا برای فهمیدن بهتر چرخه‌حیات فرگمنت چند سناریو را بررسی می‌کنیم:
+
+
+سناریو ۱ - فرگمنت با اکتیویتی شروع‌شده و با آن تمام می‌شود:
+
+
+![fragment-with-activity](fragment-with-activity-scenario.png)
+
+نکته‌ای که در این دیاگرام وجود دارد آن است که کال‌بک‌هایی که در کنار هم وجود دارند، لزوما به ترتیب صدازده نمی‌شوند، بلکه پارالل اجرا می‌شوند. یعنی ممکن است ابتدا onStart اکتیویتی صدازده و بعد onStart فرگمنت و بلافاصله یعد از آن onResume  فرگمنت صدازده شده و سپس onResume اکتیویتی.
+
+  
+
+سناریو ۲ - فرگمنت همراه با اکتیویتی بچرخند
+
+
+![activity-with-fragment-rotate](activity-with-fragment-rotate.png)
+وضعیت فرگمنت بسیار شبیه به وضعیت اکتیویتی ذخیره و بازگردانی می‌شود، با این تفاوت که در فرگمنت onRestoreInstanceState()  نداریم بلکه باندل در onCreate(), onViewCreated() و onActivityCreated() در دسترس است.
+
+
+
+سناریو ۳ - فرگمنت نگه‌داری‌شده همراه با اکتیویتی بچرخند:
+
+می‌توانیم فرگمنت را در چرخش‌ها نگهداریم(retain). برای این کار setRetainInstance(true) را انجام می‌دهیم. با این کار دیگر فرگمنت از اول ساخته نمی‌شود بلکه در مموری نگه‌داری شده و بعد از چرخش از همان instance قبلی استفاده می‌شود.
+ 
+
+![activity-with-retain-fragment-rotate](activity-with-retain-fragment-rotate.png)
+
+استفاده از فرگمنت‌ retain شده اصلا پیشنهاد نمی‌شود مگر در مواردی که فرگمنت ui ندارد و از آن برای جابجایی داده استفاده می‌شود. که این کار را ViewModel  با api  ساده‌تر انجام می‌دهد.
+
+
+
+
+
 منابع
 ---
 
@@ -131,3 +169,5 @@ https://developer.android.com/guide/components/fragments
 https://developer.android.com/guide/practices/screens_support
 
 https://gist.github.com/kaushikgopal/5c1b029798b73c73193d
+
+https://medium.com/@JoseAlcerreca/the-android-lifecycle-cheat-sheet-part-iii-fragments-afc87d4f37fd
