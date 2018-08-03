@@ -215,7 +215,7 @@ how to use it
 ```
 
 
-#### 2.then you should add below text as a comment to top of your all files in project.
+#### 2.then you should add below text as a comment to top of your all files in your project.
 
 ```markdown
 Copyright [yyyy] [name of copyright owner]
