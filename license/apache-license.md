@@ -6,7 +6,7 @@ with this license anybody can reproduce, rewrite,change,... project and release 
 
 how to use it
 ---
-####1.To use this license you should add below Apache license to your project root.
+#### 1.To use this license you should add below Apache license to your project root.
 
 
 ```markdown
@@ -215,7 +215,7 @@ how to use it
 ```
 
 
-####2.then you should add below text as a comment to top of your all files in project.
+#### 2.then you should add below text as a comment to top of your all files in project.
 
 ```markdown
 Copyright [yyyy] [name of copyright owner]
