@@ -1,3 +1,10 @@
+GNU GENERAL PUBLIC LICENSE
+---
+The GNU General Public License is a free, copyleft license for software and other kinds of works.
+
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+
+
 
 
 how to use
