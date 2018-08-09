@@ -234,3 +234,5 @@ https://developer.android.com/guide/practices/screens_support
 https://gist.github.com/kaushikgopal/5c1b029798b73c73193d
 
 https://medium.com/@JoseAlcerreca/the-android-lifecycle-cheat-sheet-part-iii-fragments-afc87d4f37fd
+
+https://inthecheesefactory.com/blog/fragment-state-saving-best-practices/en
