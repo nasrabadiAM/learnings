@@ -19,6 +19,7 @@ View
 
 لایف‌سایکل یک کاستوم‌ویو همانند شکل زیر است. 
 //عکس لاف‌سایکل ویو
+![android_view_lifecycle](android_view_lifecycle.png)
 
 
 
