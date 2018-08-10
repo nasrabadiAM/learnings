@@ -223,6 +223,11 @@ android fragment چه فرقی با support fragment دارد؟
 
 
 
+این هم یک عکس کامل از لایف‌سایکل فرگمنت
+---
+![fragment_complete_lifecycle](fragment_complete_lifecycle.png)
+
+
 
 منابع
 ---
