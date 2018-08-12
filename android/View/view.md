@@ -126,3 +126,110 @@ invalidate() را زمانی صدا می‌زنیم که فقط تغییر گر�
  و 
  onRestoreInstanceState
  
+ 
+ 
+ 
+ اندروید به صورت خودکار وضعیت ویو‌های استاندارد خودش را در داخل خود ویو  ذخیره و بازیابی می‌کند.
+
+
+اندروید چگونه وضعیت‌ها را نگه‌می‌دارد؟
+---
+سیستم ذخیره و بازیابی ویو در اندروید مانند به شکل زیر است:
+
+
+![state_handler_methods](state_handler_methods.png)
+
+
+
+
+ابتدا متد saveHierarchyState(SparseArray<Parcelable> container) توسط اندروید صدا زده‌می‌شود.  و این متد به صورت نرمال متد dispatchSaveInstanceState() را صدا می‌زند.
+
+
+متد dispatchSaveInstanceState(SparseArray<Parcelable> container) به وسیله متد saveHierarchyState() صدا زده‌می‌شود. این متد، onSaveInstanceState() را در داخل خود صدا می‌زند و انتظار دارد که یک Parcelable  به عنوان وضعیت ویو بازگردانده شود. این Parcelable در متغیر container  و به صورت key-value  ذخیره و نگه‌داری می‌شود.  key ‌ها id  ویوها هستند و valueها Parceble های مربوط به هر ویو.
+
+وضعیت‌ هر کدام از ویو‌ها به این صورت ذخیره می‌شوند و  اگر یکی از این id ها یک ViewGroup باشد، تمام زیرگروه‌های آن نیز ذخیره خواهند شد.
+
+
+متد Parcelable onSaveInstanceState() به وسیله dispatchSaveInstanceState() صدا زده‌ می‌شود. 
+
+این متد باید توسط ویو implement شود تا وضعیت واقعی ویو را بازگرداند.
+
+
+بعد از ذخیره صحیح وضعیت ویو‌ها، زمانی خواهد رسید که این وضعیت باید بازگردانی شود. 
+
+در این زمان متد restoreHierarchyState(SparseArray<Parcelable> container) توسط اندروید صدازده خواهد شد. در این متد به عنوان پارامتر ورودی یک SparseArray داریم که اطلاعات ویو‌ها را در زمان ذخیره، در خود نگه‌داشته و حال به عنوان پارامتر ورودی باز می‌گرداند.
+
+این  متد در داخل خود متد dispatchRestoreInstanceState(SparseArray<Parcelable> container) را برای هر hierachy صدا می‌زند.
+
+
+
+متد dispatchRestoreInstanceState(SparseArray<Parcelable> container) توسط متد restoreHierarchyState()  صدا زده می‌شود، سپس Parcelable ها را بر اساس id  به متد onRestoreInstanceState() پاس می‌دهد. اگر موردی که پاس می‌دهد یک ViewGroup باشد، تمام بچه‌هایش را هم باز می‌گرداند. 
+
+
+
+متد onRestoreInstanceState(Parcelable state) توسط dispatchRestoreInstanceState() صدا رده می‌شود. اگر وضعیت یک ویو در container مشخص باشد، آن وضعیت با یک Parcelable  به متد  onRestoreInstanceState پاس داده می‌شود.
+
+
+نکته مهم این قسمت آن است که container  بین همه این قسمت‌ها مشترک است.
+
+خب فهمیدیم که وضعیت هر ویو بر اساس id آن ذخیره می‌شود، برای آنکه وضعیت یک ویو ذخیره و بازیابی شود باید حتما id داشته باشد. که این id  در xml و یا در کلاس جاوا ست می‌کنیم.
+
+برای آنکه مثالی از  SparseArray  را ببینید، به کد زیر نگاه کنید:
+
+```xml
+
+<LinearLayout  
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:orientation="horizontal"  
+    android:padding="@dimen/activity_horizontal_margin">  
+    <ImageView  
+        android:id="@+id/image"
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:src="@drawable/ic_launcher"/>  
+    <TextView  
+        android:id="@+id/text"
+        android:layout_width="0dip"  
+        android:layout_weight="1"  
+        android:layout_height="wrap_content"  
+        android:text="My Text"/>  
+    <Switch  
+        android:id="@+id/toggle"
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:layout_margin="8dip"/>  
+</LinearLayout>
+``` 
+
+آرایه SparseArray  ما به شکل زیر خواهد بود:
+
+
+![simple_sparse_array](simple_sparse_array.png)
+
+
+
+
+علاوه‌بر داشتن ID گاهی اوقات نیاز است تا پروسه ذخیره و بازیابی را فعال هم کنید، برای این کار باید متد setSaveEnabled(true) را صدا بزنید.
+
+اگر نیاز داشتیم تا یک وضعیت دلخواه را ذخیره کنیم،‌می‌توانیم از کلاس BaseSavedState  استفاده کینم. 
+برای این کار از این لینک استفاده کنید(https://trickyandroid.com/saving-android-view-state-correctly/)
+
+کلاس BasedViewState کلاسی است که به‌وسیله آن می‌توانیم چیزی شبیه به کلاس Bundle  کاستوم‌شده برای خودمان بسازیم و از آن استفاده کنیم.
+
+
+
+
+
+
+
+منابع
+---
+
+https://trickyandroid.com/saving-android-view-state-correctly/
+
+
+
+
+
