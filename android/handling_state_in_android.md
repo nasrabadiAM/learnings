@@ -57,3 +57,7 @@ mvp
 ---
 
 http://hannesdorfmann.com/mosby/getting-started/
+
+https://android.jlelse.eu/presentation-model-and-passive-view-in-mvp-the-android-way-fdba56a35b1e
+
+https://hackernoon.com/presenters-are-not-for-persisting-f537a2cc7962
