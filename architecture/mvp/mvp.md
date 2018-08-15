@@ -56,5 +56,11 @@ mvp
 
 
 
-![mvp](mvp.png)
+![mvp](mvp-overview.png)
 
+
+
+یک چرخه که در mvp  استفاق می‌افتد
+---
+
+![mvp](mvp-workflow.png)
