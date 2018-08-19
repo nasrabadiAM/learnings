@@ -206,6 +206,11 @@ System.gc()
 ---
 
 
+https://www.google.nl/search?q=android+memory+managed+by+java%3F&oq=android+memory+managed+by+java%3F&aqs=chrome..69i57j69i64l2.10903j0j7&sourceid=chrome&ie=UTF-8
+
+https://www.google.nl/search?q=how+many+kind+of+memory+exists+in+android&oq=how+many+kind+of+memory+exists+in+android&aqs=chrome..69i57.12261j0j7&sourceid=chrome&ie=UTF-8
+
+
 مموری‌لیک چیست؟ چطور اتفاق می‌افتد؟ چرا اتفاق می‌افتد؟ معمولا در کجا ها اتفاق می‌افتد؟ چه راه‌هایی برای پیدا کردن آن وجود دارد؟ چطور می‌توان آن را حل کرد؟
 ---
 
