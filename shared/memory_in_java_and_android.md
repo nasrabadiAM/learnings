@@ -104,6 +104,9 @@ public class Memory {
 
 ![eligible-objects.jpg](eligible-objects.jpg)
 
+![gc-root.jpg](gc-root.jpg)
+
+
 این سیستم پیاده‌سازی‌ها مختلفی دارد که در این قسمت ما به دو پیاده‌سازی آن اشاره می‌کنیم.
 
 **1-generation base**
