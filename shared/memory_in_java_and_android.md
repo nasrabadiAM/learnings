@@ -63,6 +63,14 @@ public class Memory {
 ![Java-Heap-Stack-Memory.png](Java-Heap-Stack-Memory.png)
 
 
+ین تصویر رفرنس ها را بهتر نشان می‌دهد:
+
+![javamemory.jpg](javamemory.jpg)
+
+اگر به تصویر بالا دقت کنید، می‌بینید که رفرنسی‌ها متفاوت نشان داده‌شده‌اند. این موضوع به این خاطر است که رفرنس‌های مختلف در شرایط مختلف رفتارهای متفاوتی نسبت به gc نشان می‌دهند..
+
+این رفرنس‌ها می‌توانند:  strong, weak, soft, and phantom  fhakn.
+
 
 
 **تفاوت‌ها:**
