@@ -38,7 +38,7 @@ StringBuilder builder = new StringBuilder();
 
 اگر کد زیر را در نظر بگیریم:
 
-```
+```java
 package com.journaldev.test;
 
 public class Memory {
@@ -69,7 +69,7 @@ public class Memory {
 
 اگر به تصویر بالا دقت کنید، می‌بینید که رفرنسی‌ها متفاوت نشان داده‌شده‌اند. این موضوع به این خاطر است که رفرنس‌های مختلف در شرایط مختلف رفتارهای متفاوتی نسبت به gc نشان می‌دهند..
 
-این رفرنس‌ها می‌توانند:  strong, weak, soft, and phantom  fhakn.
+این رفرنس‌ها می‌توانند:  strong, weak, soft, and phantom  باشند.
 
 
 
