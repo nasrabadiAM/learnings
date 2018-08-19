@@ -222,6 +222,7 @@ Heap size  چیست؟ چطور کار می‌کند؟ چه استفاده‌ای
 تغییر heap size و بالابردن آن در مانیفست چه مشکلاتی را ایجاد می‌کند؟ چرا؟ چطور؟
 ---
 
+https://www.google.nl/search?q=what+are+the+problems+of+increasing+android+project+heap+size&oq=what+are+the+problems+of+increasing+android+project+heap+size+&aqs=chrome..69i57.18580j0j7&sourceid=chrome&ie=UTF-8
 
 
 
