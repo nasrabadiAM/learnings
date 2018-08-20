@@ -260,13 +260,17 @@ System.gc()
 Android Profiler 
 موجود در اندروید استودیو است.
 
+همچنین با استفاده از  
+dumpsys  
+در کامندلاین می‌توانیم دامپ مموری را گرفته و ببینیم مشکل در کجاست
+
+همچنین خود اندروید پروفایلر هم می تواند درخت استفاده از مموری را نشان دهد.
+
+
+
 ---
 *****برای جواب به سوالات زیر باید منابع دوم به بعد خوانده شوند.*****
 ---
-
-https://developer.android.com/topic/performance/memory
-
-https://developer.android.com/studio/profile/memory-profiler
 
 
 مموری‌لیک چیست؟ چطور اتفاق می‌افتد؟ چرا اتفاق می‌افتد؟ معمولا در کجا ها اتفاق می‌افتد؟ چه راه‌هایی برای پیدا کردن آن وجود دارد؟ چطور می‌توان آن را حل کرد؟
@@ -300,3 +304,5 @@ https://www.yourkit.com/docs/kb/sizes.jsp
 
 
 https://developer.android.com/topic/performance/memory-overview
+
+https://developer.android.com/studio/profile/memory-profiler
