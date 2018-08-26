@@ -1,15 +1,187 @@
-
-چطور یک لیست‌ویو یا ریسایکلر‌ویو با آیتم‌های متفاوت بسازیم؟
+چطور در Heterogenous RecyclerView بسازیم و از چند ویوهولدر استفاده کنیم؟
 ---
+برای اینکار باید از چند ویوهولدر مختلف استفاده کنیم. به ازای هر نوع آیتمی‌ که داریم، یک ویوهولدر مخصوص به آن می‌سازیم و در onCreateViewHolder  با سوییچ‌کیس آیتم مربوط به آن پوزیشن را می‌سازیم.
 
-چطور در Heterogenous RecyclerView از چند ویوهولدر استفاده کنیم؟
----
+تکه کد 
+```java 
+ @NonNull
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
+        View view = inflater.inflate(viewType, viewGroup, false);
+        return ViewHolderCreator.getView(viewType, view);
+    }
+```
+
+کلاس ViewHolderCreator هم به صورت زیر است:
+
+```java
+
+public class ViewHolderCreator {
+
+    public static RecyclerView.ViewHolder getView(int viewLayout, View view) {
+        switch (viewLayout) {
+            case R.layout.image_item:
+                return new ImageViewHolder(view);
+            case R.layout.product_item:
+                return new ProductViewHolder(view);
+            case R.layout.progressbar_item:
+                return new ProgressViewHolder(view);
+            default:
+                return new ProgressViewHolder(view);
+        }
+    }
+}
+```
+
+متد getViewType هم به صورت زیر خواهد بود:
+```java
+    @Override
+    public int getItemViewType(int position) {
+        if (items.get(position) instanceof Product)
+            return R.layout.product_item;
+        if (items.get(position) instanceof String)
+            return R.layout.image_item;
+        if (items.get(position) instanceof Boolean)
+            return R.layout.progressbar_item;
+        return -1;
+    }
+
+```
+
+در onbindViewHolder  هم با استفاده از یک اینترفیس که متد bind را دارد،که در آن آیتم را می‌دهیم تا به ویو را بایند کند. این اینترفیس  بایند باید در همه ویو‌هولدر‌های مربوط به هر آیتم ایمپلمنت شود. 
+
+متد onBindViewHolder  در ادپتر به صورت زیر است:
+
+```java
+ @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
+        if (viewHolder instanceof Binder) {
+            ((Binder) viewHolder).bind(items.get(position));
+        }
+    }
+```
+
+و ویو‌هولدر‌ها هم به صورت زیر پیاده‌سازی می‌شوند:
+
+```java
+
+//ProductViewHolder
+
+public class ProductViewHolder extends RecyclerView.ViewHolder implements Binder {
+
+    private ImageView image;
+    private TextView title;
+    private TextView desc;
+
+    public ProductViewHolder(@NonNull View itemView) {
+        super(itemView);
+        image = itemView.findViewById(R.id.product_image);
+        title = itemView.findViewById(R.id.product_title);
+        desc = itemView.findViewById(R.id.product_desc);
+    }
+
+    @Override
+    public void bind(Object item) {
+        Product product = (Product) item;
+        image.setImageResource(R.drawable.lion);
+        title.setText(product.getTitle());
+        desc.setText(product.getDesc());
+    }
+
+}
+
+
+//ProgressViewHolder
+
+public class ProgressViewHolder extends RecyclerView.ViewHolder implements Binder {
+
+    private ProgressBar progressBar;
+
+    public ProgressViewHolder(@NonNull View itemView) {
+        super(itemView);
+        progressBar = itemView.findViewById(R.id.progressbar);
+    }
+
+    @Override
+    public void bind(Object item) {
+        Boolean progressVisibility = (Boolean) item;
+        if (progressVisibility) {
+            progressBar.setVisibility(View.VISIBLE);
+        } else {
+            progressBar.setVisibility(View.GONE);
+        }
+    }
+
+}
+
+
+//ImageViewHolder
+
+public class ImageViewHolder extends RecyclerView.ViewHolder implements Binder {
+
+    private ImageView imageView;
+    private TextView imageUrl;
+
+    public ImageViewHolder(@NonNull View itemView) {
+        super(itemView);
+        imageView = itemView.findViewById(R.id.image);
+        imageUrl = itemView.findViewById(R.id.image_url);
+    }
+
+    @Override
+    public void bind(Object item) {
+        String imageUrlStr = (String) item;
+        imageUrl.setText(imageUrlStr);
+        imageView.setImageResource(R.drawable.panda);
+    }
+
+//Binder Interface
+
+public interface Binder {
+    void bind(Object object);
+}
+
+```
+
+راه دیگری که می‌توانیم برای پیاده‌سازی  Heterogenous RecyclerView استفاده کنیم، در لینک زیر وجود دارد. این راه بسیار تمیزتر است، اما یک مشکل اساسی دارد و آن هم این است که اضافه کردن آیتم‌های مختلف بین هم‌دیگر در لیست کار سختی است. اگر بتوانیم این مشکل را حل کنیم، استفاده از این راه بیشتر پیشنهاد می‌شود.
+
+https://stackoverflow.com/a/29394173/8743629
+
+https://github.com/yqritc/RecyclerView-MultipleViewTypesAdapter
+
+
 
 چطور یک لیست‌ویو unlimited  داشته باشیم؟
 ---
+برای اینکار از یک Heterogenous RecyclerView  استفاده می‌کنیم که یکی از آیتم‌های آن progressbar است. با استفاده از یک onScrollListener چک می‌کنیم که آیا لیست به انتها رسیده یا خیر و اگر رسیده بود این آیتم را به انتهای لیست اضافه می‌کنیم و هر موقع که آیتم‌های بعدی لود شدند، آن را حذف کرده و سپس آیتم‌های اضافه شده را به لیست اضافه می‌کنیم.
+
+
+
 
 چطور خودمان یک لیست‌ مثل کانتکت‌های گوشی با جدا کردن حروف الفبا بنویسیم؟
 ---
+به این نوع از لیست Sticky Header List  می‌گویند.
+
+دو راه برای این کار وجود دارد، یک استفاده از  ItemDecoration و رسم هدر با Canvas  هست و راه دوم استفاده از Layout Manager  هست.
+
+
+در طراحی یک ui اگر نمی‌توانی خودش را بسازی، فیک‌اش را بساز.
+ براساس همین اصل، اگر بخواهیم ویژگی sticky header را به ریسایکلرویو اضافه کنیم، باید کلی کار انجام دهیم و ریسایکلرویو را از اول بسازیم، برای همین بهتر است این فیک این ویژگی را اضافه کنیم.
+
+برای اضافه کردن sticky header فیک باید از itemDecoration  استفاده کنیم. کلا از itemDecoration  می‌توانیم برای رسم چیزهای اضافه روی ریسایکلرویو استفاده کنیم. مثلا اگر بخواهیم ه ریسایکلرویو قابلیت گرفتن زوم به‌وسیله تاچ و گرفتن مقدار زوم برای بزرگتر کردن فونت را بخواهیم،‌ باید از itemDecoration  کاستوم استفاده کنیم. (مثل اپ sms ال‌جی کا فونت با زوم اضافه می‌شود)
+
+برای اضافه کردن sticky header هم از یک item Decoration کاستوم استفاده می‌کنیم. این item decoration  به این صورت کار می‌کند که زمانی که یک آیتم هدر به بالای لیست می‌رسد، آن آیتم را دوباره روی خودش در بالای لیست رسم می‌کند و دیگر هدر موجود در لیست معلوم نیست، بلکه ویویی که مجددا روی آن رسم شده در حال نمایش است. بعد از آن زمانیکه هدر بعدی می‌آید، با یک اسکرول هدر رسم‌شده قبلی بالای هدر بعدی اسکرول می‌شود، تا هدر جدید به بالای لیست برسد و در آن لحظه دوباره مثل قبل هدر روی لیست رسم می‌شود.
+
+//دو گیف 
+
+نمونه کد این کار در لینک زیر قرار دارد:
+https://stackoverflow.com/a/44327350/8743629 
+
+راه دومی که برای این کار استفاده می‌شود، استفاده از یک LayoutManager  کاستوم است که مثال آن در لینک زیر وجود دارد.
+https://github.com/ShamylZakariya/StickyHeaders
+
+https://github.com/bgogetap/StickyHeaders
 
 
 
