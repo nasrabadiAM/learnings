@@ -20,7 +20,7 @@ View
 چرخه  حیات ویو‌ها همانند عکس زیر است.
 
 
-![view-lifecycle](view-lifecycle.webp)
+![view-lifecycle](view-lifecycle.png)
 
 برای هر ویو این چرخه به ترتتیب اجرا می‌شود که باعث صدازده‌شدن، کال‌بک‌های زیر می‌شود.
 
