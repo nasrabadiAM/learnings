@@ -315,6 +315,13 @@ https://github.com/bgogetap/StickyHeaders
 
 
  
+ چطور می‌توانیم اسکرول‌ویویی با قابلیت tableView  داشته باشیم و بتوانیم به همه طرف اسکرول کنیم؟
+ ---
+ با استفاده از یک Layout Manager  
+ کاستوم می‌توانیم این قابلیت را داشته باشیم. برای اطلاعات بیشتر فایل زیر را ببینید:
+ 
+ https://github.com/brkckr/TableView/blob/master/app/src/main/java/com/bullseyedevs/tableview/util/FixedGridLayoutManager.java
+ 
  
  
  
