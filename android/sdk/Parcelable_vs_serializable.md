@@ -104,7 +104,7 @@ parcelable
 
 
 لینک مقاله‌ای که درباره این موضوع نوشتم:
-
+---
 https://virgool.io/@nasrabadiam/serializable-vs-parcelable-lqmmpsfyfrmp
 
 
