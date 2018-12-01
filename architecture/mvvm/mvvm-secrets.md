@@ -21,6 +21,9 @@
 در کل بیشتر از یک راه برای پیاده‌سازی این معماری وجود دارد، می‌توانیم از eventBus, RxAndroid, Google's ViewModel with LiveData  و یا کلا از یک Observer Pattern استفاده کنیم.
 ویومدل با Observer Pattern و به صورت ری‌اکتیو پیاده می‌شود.
 
+
+
+
 نمونه کد
 ---
 
