@@ -23,9 +23,15 @@
 
 نمونه کد
 ---
+
 https://github.com/hazems/mvvm-sample-app
+
 https://github.com/ankitsharma6466/AndroidKotlinBoilerplate
+
 https://github.com/MindorksOpenSource/android-mvvm-architecture
+
+
+
 منابع
 ---
 
