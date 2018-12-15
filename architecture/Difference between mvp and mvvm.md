@@ -1,3 +1,6 @@
+<div dir="rtl">
+
+
 Difference between mvp and mvvm
 ---
 تفاوت اصلی این دو پترن در این است که رابطه بین ویو و پرزنتر یک به یک است درصورتی که رابطه بین ویو و ویو‌مدل یک به چند است، یعنی هر ویو می‌تواند چندین ویو‌مدل داشته باشد.
@@ -84,3 +87,6 @@ https://martinfowler.com/eaaDev/uiArchs.html
 https://academy.realm.io/posts/eric-maxwell-mvc-mvp-and-mvvm-on-android/
 
 http://www.differencebetween.net/technology/difference-between-mvvm-and-mvp/
+
+
+</div>
