@@ -1,4 +1,4 @@
-<div dir="ltr">
+<div dir="rtl">
 
 
 Difference between mvp and mvvm
