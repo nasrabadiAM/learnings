@@ -33,6 +33,7 @@ MVC
 
 //عکس
 
+![Activity states](activitySta
 MVP
 ---
 
