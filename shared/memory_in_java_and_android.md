@@ -318,6 +318,24 @@ OutOfMemory
 استفاده نکنید، چرا که این کار باعث بزرگتر شدن هیپ‌سایز شده و در نتیجه gc زمان بیشتری برای خالی کردن آن نیاز دارد.
 و در نتیجه کاربر متوجه مشکلات پرفورمنسی خواهد شد.
 
+برای بدست آوردن مقدار هیپ‌مموری در دسترس برنامه از یکی از دو روش زیر استفاده می‌کنیم:
+1. در این روش مقدا مموری که بعد از آن Hard crash خواهیم داشت را می‌گیریم.
+```java
+Runtime rt = Runtime.getRuntime();
+long maxMemory = rt.maxMemory();
+Log.v("onCreate", "maxMemory:" + Long.toString(maxMemory));
+```
+2. اما در این حالت مقدار مموری که می‌توانیم استفاده کنیم تا بتوانیم به کاربر پاسخگو باشیم را می‌گیریم.
+```java
+ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+int memoryClass = am.getMemoryClass();
+Log.v("onCreate", "memoryClass:" + Integer.toString(memoryClass));
+```
+
+در بیشتر موارد این دو عدد با هم برابرند.
+
+
+
 
 
 منابع
