@@ -1,7 +1,3 @@
-Layouts Sub Directory
-===
-
-
 موضوع
 ===
 <p dir="rtl">
