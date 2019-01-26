@@ -384,6 +384,8 @@ public class Point {
   ها نیازی به محافظت ندارد، چون فقط از داخل خآن ترد قابل دسترسی هستند.
 </p>
 
+<br>
+
 <p dir="rtl"><b>
 Thread safe
   بودن یا نبودن، مساله این است.
@@ -448,20 +450,55 @@ public class SimpleCache {
 ```
 
 <p dir="rtl">
+  خیلی از کلاس‌های جاوا مثل 
+  String immutable
+  هستند اما این 
+  immutability 
+  از کاربر پنهان شده است.
+  در کل هرزمان که همه فیلد‌های یک کلاس 
+  final 
+  باشند، می‌گوییم آن کلاس 
+  immutable
+  است.
 </p>
 
 <p dir="rtl">
+  معمولا در موارد زیر نیاز نیست تا کدمان را  
+  synchronize
+  کنیم.
 </p>
+
+<ul dir="rtl">
+  <li>When data is initialized by a static initializer (an initializer on a static field or in a static{} block)</li>
+  <li>When accessing final fields</li>
+  <li>When an object is created before a thread is created</li>
+  <li>When an object is already visible to a thread that it is then joined with</li>
+</ul>
+
+<br>
+<p dir="rtl"><b>
+  Deadlock
+</b></p>
 
 <p dir="rtl">
+  ددلاک زمانی اتفاق می‌افتد که دو ترد منتظر کاری باشند که فقط یکی دیگر از آن‌ها می‌تواند آن کار را انجام دهد و هر دو ترد تا ابد برای یکدیگر صبر می‌کنند.
+  برای جلوگیری از ددلاک باید زمانی که از چندین لاک استفاده می‌کنیم، دقت کنیم که در بقیه جاها هم به همان ترتیبی که در جای اول استفاده کردیم، از لاک‌ها استفاده کنیم.
 </p>
+
+
+<p dir="rtl"><b>برای جلوگیری  از ایجاد مشکلات در زمان 
+  synchronization
+  به نکات زیر توجه داشته باشیم:</b></p>
+
+<ul dir="rtl">
+  <li>تا آنجایی که امکان دارد بلاک‌های synchronize را کوتاه نگه‌داریم.</li>
+  <li>هیچوقت  متدهایی که ممکن است بلاک شوند را صدا نزنیم. مثل: InputStream.read()</li>
+  <li>زمانی که لاکی از یک آبجکت را گرفته‌ایم، هیچوقت متد‌هایی از آبجکت‌های دیگر را صدا نزنیم</li>
+</ul>
 
 <p dir="rtl">
+البته مورد سوم خیلی رویایی است اما اگر بتوانیم تا حد ممکن آن را رعایت کنیم، منبع ایجاد بیشتر ددلاک‌ها از بین می‌رود.
 </p>
-
-<p dir="rtl">
-</p>
-
 
 
 منابع
