@@ -1,3 +1,5 @@
+<div dir="rtl">
+  
 Handling States in Android
 ---
 
@@ -116,3 +118,4 @@ https://hackernoon.com/presenters-are-not-for-persisting-f537a2cc7962
 
 https://developer.android.com/topic/libraries/architecture/saving-states
 
+</div>
