@@ -8,7 +8,6 @@ infix
 
 مثل: 
 
-<div dir="ltr">
 ```kotlin
 
 infix fun Int.shl(x: Int): Int { ... }
@@ -20,7 +19,6 @@ infix fun Int.shl(x: Int): Int { ... }
 1.shl(2)
 
 ```
-</div>
 
 با تعریف یک 
 infix function
@@ -56,10 +54,3 @@ class MyStringCollection {
 }
 
 ```
-
-
-
-
-
-
-</div>
