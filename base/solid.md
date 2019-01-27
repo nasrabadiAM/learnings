@@ -11,6 +11,7 @@ SOLID
 کلمه 
 SLOID 
 مخفف پنج کلمه است.
+</div>
 
 1. S - Single Responsibility Prinsiple
 2. O - Open/Close Principle
@@ -18,7 +19,7 @@ SLOID
 4. I - Interface Segregation Principle
 5. D - Dependency Inversion Principle
 
-
+<div dir="rtl">
 قانون اول - Single Responsibility Principle
 ---
 این قانون می‌گوید که هر کلاس باید فقط یک کار را انجام دهد و فقط یک دلیل برای تغییر داشته باشد.
@@ -29,15 +30,19 @@ Smart
 باشند و از قسمت‌های مختلف کد و کلاس‌های دیگر خبر داشته باشند. مثلا کلاسی باشد که اگر فلان اتفاق در کلاس دیگری افتاد، کاری را انجام دهد.
 
 یکی از مثال‌های نقض این قانون نمونه کد زیر است 
+</div>
 
 <script src="https://gist.github.com/nasrabadiAM/48b74b3f429f50a9b720d952dba0bc7a.js"></script>
- 
+
+<div dir="rtl">
  و با تغییرات زیر این قانون در آن رعایت می‌شود:
- 
+</div>
+
 <script src="https://gist.github.com/nasrabadiAM/cf47047874f696f9b95d2c1131fffead.js"></script>
  
  
- 
+<div dir="rtl">
+
 قانون دوم - Open/Close Principle
 ---
 این قانون می‌گوید که باید بتوانیم از یک کلاس ارث‌بری کنیم بدون آنکه نیاز باشد کلاس پرد را تغییر دهیم.
@@ -111,5 +116,6 @@ https://www.youtube.com/playlist?list=PLT2xIm2X7W7jh6KggjhwTH9s_8XIlSdOs
 https://springframework.guru/principles-of-object-oriented-design/single-responsibility-principle/
 
 http://joelabrahamsson.com/a-simple-example-of-the-openclosed-principle/
+</div>
 
 
