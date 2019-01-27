@@ -20,6 +20,7 @@ SLOID
 4. I - Interface Segregation Principle
 5. D - Dependency Inversion Principle
 
+
 قانون اول - Single Responsibility Principle
 ---
 <p dir="rtl">
@@ -35,11 +36,14 @@ Smart
 یکی از مثال‌های نقض این قانون نمونه کد زیر است 
 </p>
 
+
 <script src="https://gist.github.com/nasrabadiAM/48b74b3f429f50a9b720d952dba0bc7a.js"></script>
+
 
 <p dir="rtl">
  و با تغییرات زیر این قانون در آن رعایت می‌شود:
 </p>
+
 
 <script src="https://gist.github.com/nasrabadiAM/cf47047874f696f9b95d2c1131fffead.js"></script>
  
