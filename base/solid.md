@@ -36,17 +36,64 @@ Smart
 یکی از مثال‌های نقض این قانون نمونه کد زیر است 
 </p>
 
+```java
 
-<script src="https://gist.github.com/nasrabadiAM/48b74b3f429f50a9b720d952dba0bc7a.js"></script>
+class Text {
+    String text;
+    String author;
+    int length;
 
+    String getText() { ... }
+    void setText(String s) { ... }
+    String getAuthor() { ... }
+    void setAuthor(String s) { ... }
+    int getLength() { ... }
+    void setLength(int k) { ... }
+
+    /*methods that change the text*/
+    void allLettersToUpperCase() { ... }
+    void findSubTextAndDelete(String s) { ... }
+
+    /*method for formatting output*/
+    void printText() { ... }
+}
+
+```
 
 <p dir="rtl">
  و با تغییرات زیر این قانون در آن رعایت می‌شود:
 </p>
 
+```java
 
-<script src="https://gist.github.com/nasrabadiAM/cf47047874f696f9b95d2c1131fffead.js"></script>
+class Text {
+    String text;
+    String author;
+    int length;
  
+    String getText() { ... }
+    void setText(String s) { ... }
+    String getAuthor() { ... }
+    void setAuthor(String s) { ... }
+    int getLength() { ... }
+    void setLength(int k) { ... }
+ 
+    /*methods that change the text*/
+    void allLettersToUpperCase() { ... }
+    void findSubTextAndDelete(String s) { ... }
+}
+ 
+class Printer {
+    Text text;
+ 
+    Printer(Text t) {
+       this.text = t;
+    }
+ 
+    void printText() { ... }
+}
+
+```
 
 قانون دوم - Open/Close Principle
 ---
