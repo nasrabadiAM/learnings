@@ -113,5 +113,3 @@ https://springframework.guru/principles-of-object-oriented-design/single-respons
 http://joelabrahamsson.com/a-simple-example-of-the-openclosed-principle/
 
 
-
-</div>
