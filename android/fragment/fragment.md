@@ -1,3 +1,5 @@
+<div dir="rtl">
+  
 فرگمنت چیست؟
 ---
 فرگمنت یک رفتار یا بخشی از ui است. در واقع می‌توان آن را یک مازول مجزا در نظر گرفت که به عنوان بخشی از ui در اکتیویتی به کار می‌رود. داده‌های ورودی و خروجی خودش را دارد، لایف سایکل خودش را دارد و می‌تواند به یک اکتیویتی در حال اجرا اضافه شود و یا از آن کم شود.
@@ -241,3 +243,5 @@ https://gist.github.com/kaushikgopal/5c1b029798b73c73193d
 https://medium.com/@JoseAlcerreca/the-android-lifecycle-cheat-sheet-part-iii-fragments-afc87d4f37fd
 
 https://inthecheesefactory.com/blog/fragment-state-saving-best-practices/en
+
+</div>
