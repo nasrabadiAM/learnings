@@ -11,6 +11,7 @@ Observabale بوده و می‌توانیم روی تغییرات آن Observe �
 LiveData
 ---
 
+```
 
 /**
  * LiveData is a data holder class that can be observed within a given lifecycle.
@@ -41,10 +42,12 @@ LiveData
  * @see ViewModel
  */
  
-
+```
 
 Mediator Livedata
 ---
+
+```
 
 /**
  * {@link LiveData} subclass which may observer other {@code LiveData} objects and react on
@@ -56,13 +59,17 @@ Mediator Livedata
  * @param <T> The type of data hold by this instance
  */
  
- 
+``` 
  
  Mutable Livedata
  ---
+ 
+ ```
  
  /**
  * {@link LiveData} which publicly exposes {@link #setValue(T)} and {@link #postValue(T)} method.
  *
  * @param <T> The type of data hold by this instance
  */
+ 
+```
